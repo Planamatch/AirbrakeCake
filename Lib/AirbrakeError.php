@@ -9,7 +9,7 @@ class AirbrakeError extends ErrorHandler
     {
     	// Call Airbrake
 		$apiKey  = Configure::read('AirbrakeCake.apiKey'); // This is required
-		$options = array(); // This is optional
+		$options = Configure::read('AirbrakeCake.options');
 
 		$config = new Airbrake\Configuration($apiKey, $options);
 		$client = new Airbrake\Client($config);
@@ -23,7 +23,7 @@ class AirbrakeError extends ErrorHandler
     {
     	// Call Airbrake
 		$apiKey  = Configure::read('AirbrakeCake.apiKey'); // This is required
-		$options = array(); // This is optional
+		$options = Configure::read('AirbrakeCake.options');
 
 		$config = new Airbrake\Configuration($apiKey, $options);
 		$client = new Airbrake\Client($config);
