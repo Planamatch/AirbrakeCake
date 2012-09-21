@@ -11,6 +11,12 @@ app/Config/bootstrap.php
 // Include our awesome error catcher..
 CakePlugin::load('AirbrakeCake');
 Configure::write('AirbrakeCake.apiKey', '<API KEY>');
+
+# If you would like to use a diferent endpoint like codebase
+Configure::write('AirbrakeCake.options', array(
+	'apiEndPoint' => 'https://exceptions.codebasehq.com/notifier_api/v2/notices'
+));
+
 App::uses('AirbrakeError', 'AirbrakeCake.Lib');
 ```
 
